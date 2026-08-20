@@ -2,11 +2,10 @@
 include('conexao.php');
 
 $titulo = "Meu primeiro evento";
-$data = "2026-12-25";
 $descricao = "Uma festa de Natal incrível para desenvolvedores.";
 
-$sql = "INSERT INTO eventos (titulo, data_evento, descricao)
-        VALUES ('$titulo', '$data', '$descricao')";
+$sql = "INSERT INTO eventos (titulo, descricao)
+        VALUES ('$titulo', '$descricao')";
 
 if ($mysqli->query($sql)) {
     echo "<h1>Sucesso!</h1>";
